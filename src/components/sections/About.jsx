@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { aboutData } from '../data/aboutData';
-import useAnimatedCounter from '../hooks/useAnimatedCounter';
+import { aboutData } from '../../data/aboutData';
+import useAnimatedCounter from '../../hooks/useAnimatedCounter';
 
 const About = () => {
   const skills = [
@@ -83,14 +83,14 @@ const About = () => {
     );
   };
 
-  const stats = [
-    { label: 'Years Experience', target: aboutData.experience },
-    { label: 'Projects Completed', target: aboutData.projectsCompleted },
-    { label: 'Happy Clients', target: aboutData.happyClients },
-    { label: 'Technologies', target: aboutData.technologies }
-  ];
+  const backgroundParagraphs = aboutData.background || [];
 
-  const backgroundParagraphs = aboutData.background;
+  const stats = [
+    { label: 'Years Experience', target: aboutData.experience || 0 },
+    { label: 'Projects Completed', target: aboutData.projectsCompleted || 0 },
+    { label: 'Happy Clients', target: aboutData.happyClients || 0 },
+    { label: 'Technologies', target: aboutData.technologies || 0 }
+  ];
 
   return (
     <div className="about-skills-container">

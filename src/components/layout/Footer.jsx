@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import '../styles/Footer.css'; // Ensure this path is correct
+import '../../styles/Footer.css'; 
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -145,4 +145,3 @@ export default Footer;
 // Add the following CSS to your stylesheet to make the footer responsive
 
 /* filepath: /e:/web development/portfolio/src/styles/Footer.css */
-

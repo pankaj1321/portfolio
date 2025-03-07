@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import { ResponsiveProvider, useResponsive } from './components/ResponsiveProvider';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import Projects from './components/sections/Projects';
+import Contact from './components/sections/Contact';
+import Footer from './components/layout/Footer';
+import { ResponsiveProvider, useResponsive } from './components/common/ResponsiveProvider';
+import ErrorBoundary from './components/common/ErrorBoundary';
 
 // Separate NavigationBar component for better organization
 const NavigationBar = ({ activeSection, handleNavLinkClick, isMenuOpen, toggleMenu, closeMenu }) => {
@@ -195,7 +196,9 @@ function App() {
             <Hero />
           </section>
           <section id="about">
-            <About />
+            <ErrorBoundary>
+              <About />
+            </ErrorBoundary>
           </section>
           <section id="projects">
             <Projects />

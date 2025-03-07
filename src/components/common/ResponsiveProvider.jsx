@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getCurrentBreakpoint, addResizeListener } from '../utils/responsive';
+import { getCurrentBreakpoint, addResizeListener } from '../../utils/responsive';
 
 // Create context
 const ResponsiveContext = createContext();

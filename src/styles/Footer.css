@@ -1,0 +1,35 @@
+.quick-links-responsive {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .quick-links-responsive {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+/* ...existing code... */
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* ...existing code... */
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* ...existing code... */
+}
